@@ -9,6 +9,6 @@ declare module 'styled-components' {
     darkBlue: string;
     defaultFontFamily: string;
     defaultFontSize: string;
-    defaultFontEeight: number;
+    defaultFontWeight: number;
   }
 }

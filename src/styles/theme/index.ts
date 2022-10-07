@@ -11,7 +11,7 @@ const theme: DefaultTheme = {
   // fonts
   defaultFontFamily: 'Manrope, sans-serif',
   defaultFontSize: '1.75rem',
-  defaultFontEeight: 800,
+  defaultFontWeight: 800,
 };
 
 export default theme;
