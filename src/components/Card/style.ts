@@ -15,5 +15,7 @@ export const CardContainer = styled.section`
 
   p {
     color: ${({ theme }) => theme.lightCyan};
+    font-size: ${({ theme }) => theme.defaultFontSize};
+    font-weight: ${({ theme }) => theme.defaultFontWeight};
   }
 `;
