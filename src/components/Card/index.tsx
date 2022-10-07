@@ -1,13 +1,13 @@
+import useAdvice from '@/hooks/useAdvice';
 import { CardContainer } from './style';
 
 const Card = () => {
+  const { advice, id } = useAdvice();
+
   return (
     <CardContainer>
-      <span>advice #000</span>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque,
-        aperiam.
-      </p>
+      <span>advice #{id}</span>
+      <p>{advice}</p>
     </CardContainer>
   );
 };
