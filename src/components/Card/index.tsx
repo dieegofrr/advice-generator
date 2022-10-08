@@ -1,13 +1,15 @@
 import useAdvice from '@/hooks/useAdvice';
+import Button from '../Button';
 import { CardContainer } from './style';
 
 const Card = () => {
-  const { advice, id } = useAdvice();
+  const { advice, getAdvice } = useAdvice();
 
   return (
     <CardContainer>
-      <span>advice #{id}</span>
-      <p>{advice}</p>
+      <span>advice #{advice.id}</span>
+      <p>{advice.advice}</p>
+      <Button onClick={getAdvice} />
     </CardContainer>
   );
 };

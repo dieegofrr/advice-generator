@@ -1,8 +1,12 @@
 import { ButtonContainer } from './style';
 
-const Button = () => {
+interface ButtonProps {
+  onClick: () => void;
+}
+
+const Button = ({ onClick }: ButtonProps) => {
   return (
-    <ButtonContainer>
+    <ButtonContainer onClick={onClick}>
       <img src="/imgs/icon-dice.svg" alt="dice" />
     </ButtonContainer>
   );
