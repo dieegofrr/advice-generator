@@ -8,4 +8,12 @@ export const ButtonContainer = styled.button`
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
+
+  &:hover {
+    filter: drop-shadow(0px 0px 12px ${({ theme }) => theme.neonGreen})
+      brightness(1.1);
+  }
 `;
