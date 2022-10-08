@@ -5,11 +5,12 @@ import { CardContainer } from './style';
 const Card = () => {
   const { advice, getAdvice } = useAdvice();
   const { id, advice: text } = advice;
+  const adviceLabelID = `advice number ${id}`;
 
   return (
     <CardContainer>
       <section className="data">
-        <span tabIndex={0} aria-label="advice number {id}">
+        <span aria-label={adviceLabelID} tabIndex={0}>
           {id ? `advice #${id}` : 'advice #000'}
         </span>
         <p tabIndex={0}>{text ? text : 'wait a sec'}</p>
