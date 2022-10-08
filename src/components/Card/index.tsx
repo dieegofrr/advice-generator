@@ -19,6 +19,7 @@ const Card = () => {
         src="/imgs/pattern-divider-mobile.svg"
         alt="divider"
         className="divider"
+        aria-hidden
       />
       <Button onClick={getAdvice} />
     </CardContainer>
