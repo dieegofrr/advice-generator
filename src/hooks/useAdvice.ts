@@ -10,11 +10,12 @@ interface DataProps {
 }
 
 const useAdvice = () => {
+  const url = 'https://api.adviceslip.com/advice';
   const [advice, setAdvice] = useState<AdviceProps>({ id: 0, advice: '' });
 
   const getAdvice = async () => {
     try {
-      const response = await fetch('https://api.adviceslip.com/advice');
+      const response = await fetch(url);
       const data: DataProps = await response.json();
       setAdvice(data.slip);
     } catch {
