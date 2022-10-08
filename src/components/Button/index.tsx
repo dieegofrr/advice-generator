@@ -6,7 +6,7 @@ interface ButtonProps {
 
 const Button = ({ onClick }: ButtonProps) => {
   return (
-    <ButtonContainer onClick={onClick}>
+    <ButtonContainer onClick={onClick} aria-label="click for other advice">
       <img src="/imgs/icon-dice.svg" alt="dice" />
     </ButtonContainer>
   );
