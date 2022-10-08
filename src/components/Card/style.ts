@@ -11,6 +11,7 @@ export const CardContainer = styled.section`
   min-height: 20.75rem;
   border-radius: 0.875rem;
   padding: 3.25rem 3rem;
+  margin: 0 1rem;
 
   section.data {
     display: flex;
