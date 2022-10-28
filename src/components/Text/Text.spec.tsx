@@ -8,4 +8,9 @@ describe('Text component', () => {
     const { getByTestId } = render(<Text variant="paragraph" />);
     expect(getByTestId('paragraph')).toBeInTheDocument();
   });
+
+  it('should be render a span', () => {
+    const { getByTestId } = render(<Text variant="span" />);
+    expect(getByTestId('span')).toBeInTheDocument();
+  });
 });
