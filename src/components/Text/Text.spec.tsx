@@ -23,4 +23,9 @@ describe('Text component', () => {
     const { getByText } = render(<Text />);
     expect(getByText('...')).toBeInTheDocument();
   });
+
+  it('should be render the text provided by children prop', () => {
+    const { getByText } = render(<Text>Any text</Text>);
+    expect(getByText(/any text/i)).toBeInTheDocument();
+  });
 });
