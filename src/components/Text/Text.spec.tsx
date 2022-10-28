@@ -28,4 +28,10 @@ describe('Text component', () => {
     const { getByText } = render(<Text>Any text</Text>);
     expect(getByText(/any text/i)).toBeInTheDocument();
   });
+
+  it('should render text with white color', () => {
+    const { getByTestId } = render(<Text />);
+
+    expect(getByTestId('span')).toHaveStyle('color: white');
+  });
 });
