@@ -18,4 +18,9 @@ describe('Text component', () => {
     const { getByTestId } = render(<Text variant="span" />);
     expect(getByTestId('span')).toBeInTheDocument();
   });
+
+  it('should be render ... text if no content prop is provided', () => {
+    const { getByText } = render(<Text />);
+    expect(getByText('...')).toBeInTheDocument();
+  });
 });
