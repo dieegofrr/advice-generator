@@ -2,12 +2,10 @@
   "files.exclude": {
     "yarn.lock": true,
     "node_modules": true,
-    // ".gitignore": true,
     ".eslintignore": true,
     ".prettierrc.json": true,
     ".lintstagedrc.json": true,
     ".husky": true,
-    "vite*": true,
     "tsconfig.*": true
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
