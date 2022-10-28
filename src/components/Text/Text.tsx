@@ -3,25 +3,25 @@ import { Paragraph, Span } from './Text.styles';
 interface TextProps {
   variant?: 'paragraph' | 'span';
   fontSize?: 'big' | 'small';
-  content?: string;
+  children?: React.ReactNode;
   color?: string;
 }
 
 export const Text: React.FC<TextProps> = ({
   variant = 'span',
   fontSize = 'small',
-  content = '...',
+  children = '...',
   color = 'white',
 }) => (
   <>
     {variant === 'paragraph' && (
       <Paragraph fontSize={fontSize} color={color} data-testid="paragraph">
-        {content}
+        {children}
       </Paragraph>
     )}
     {variant === 'span' && (
       <Span fontSize={fontSize} color={color} data-testid="span">
-        {content}
+        {children}
       </Span>
     )}
   </>
