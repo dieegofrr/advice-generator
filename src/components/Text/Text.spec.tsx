@@ -4,6 +4,11 @@ import { describe, it, expect } from 'vitest';
 import { Text } from './Text';
 
 describe('Text component', () => {
+  it('should be render a span if no variant prop is provided', () => {
+    const { getByTestId } = render(<Text />);
+    expect(getByTestId('span')).toBeInTheDocument();
+  });
+
   it('should be render a paragraph', () => {
     const { getByTestId } = render(<Text variant="paragraph" />);
     expect(getByTestId('paragraph')).toBeInTheDocument();
