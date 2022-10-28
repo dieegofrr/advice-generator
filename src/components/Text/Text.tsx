@@ -10,7 +10,7 @@ interface TextProps {
 export const Text: React.FC<TextProps> = ({
   variant = 'span',
   fontSize = 'small',
-  content = '',
+  content = '...',
   color = 'white',
 }) => (
   <>
