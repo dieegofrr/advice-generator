@@ -8,7 +8,7 @@ export const Card = () => {
 
   return (
     <Styled.Wrapper>
-      <Styled.Title>advice #{id}</Styled.Title>
+      <Styled.Title>advice #{id || '00'}</Styled.Title>
       <Styled.Content>{text}</Styled.Content>
       <Styled.Image />
       <Styled.Button>

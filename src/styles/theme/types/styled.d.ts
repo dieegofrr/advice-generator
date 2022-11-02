@@ -7,8 +7,5 @@ declare module 'styled-components' {
     grayishBlue: string;
     darkGrayishBlue: string;
     darkBlue: string;
-    defaultFontFamily: string;
-    defaultFontSize: string;
-    defaultFontWeight: number;
   }
 }

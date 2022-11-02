@@ -1,12 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
 
-export default createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   * {
-    font-family: ${({ theme }) => theme.defaultFontFamily};
-    font-weight: ${({ theme }) => theme.defaultFontWeight};
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Manrope, sans-serif;
+  }
+
+  html {
+    font-size: 62.5%;
   }
 
   button {
@@ -14,8 +17,12 @@ export default createGlobalStyle`
     border: none;
   }
 
+  html, body, #root {
+    min-height: 100vh;
+  }
+
   body {
-    background-color: ${({ theme }) => theme.darkBlue};
+    background-color: ${({ theme: { darkBlue } }) => darkBlue};
   }
 
   #root {
@@ -23,7 +30,5 @@ export default createGlobalStyle`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    min-height: 100vh;
   }
 `;

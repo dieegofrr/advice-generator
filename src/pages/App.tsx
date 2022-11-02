@@ -1,6 +1,6 @@
 import { Card, Considerations } from '@/components';
 
-const App = () => {
+export const App = () => {
   return (
     <>
       <Card />
@@ -8,5 +8,3 @@ const App = () => {
     </>
   );
 };
-
-export default App;
