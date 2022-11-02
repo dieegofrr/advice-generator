@@ -1,8 +1,8 @@
-import { MutableRefObject, useRef } from 'react';
+import { MutableRefObject, useRef, FC } from 'react';
 import { useAdvice } from '@/hooks/useAdvice';
 import * as Styled from './style';
 
-export const Card = () => {
+export const Card: FC = () => {
   const contentRef = useRef() as MutableRefObject<HTMLObjectElement>;
 
   const {
