@@ -1,25 +1,25 @@
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-interface AdviceProps {
+interface SlipProps {
   id: number;
   advice: string;
 }
 
 interface DataProps {
-  slip: AdviceProps;
+  slip: SlipProps;
 }
 
-const useAdvice = () => {
+export const useAdvice = () => {
   const url = 'https://api.adviceslip.com/advice';
-  const [advice, setAdvice] = useState<AdviceProps>({ id: 0, advice: '' });
+  const [slip, setSlip] = useState<SlipProps>({ id: 0, advice: '' });
 
   const getAdvice = async () => {
     try {
-      const response = await fetch(url);
-      const data: DataProps = await response.json();
-      setAdvice(data.slip);
+      const { data } = await axios.get<DataProps>(url);
+      setSlip(data.slip);
     } catch {
-      setAdvice({ id: 0, advice: 'error, try again later' });
+      setSlip({ id: 0, advice: 'error, try again later' });
     }
   };
 
@@ -27,7 +27,5 @@ const useAdvice = () => {
     getAdvice();
   }, []);
 
-  return { advice, getAdvice };
+  return { adviceId: slip.id, adviceContent: slip.advice, getAdvice };
 };
-
-export default useAdvice;
