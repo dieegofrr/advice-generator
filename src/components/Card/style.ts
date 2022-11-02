@@ -1,53 +1,27 @@
 import styled from 'styled-components';
 
-export const CardContainer = styled.section`
-  background-color: ${({ theme }) => theme.darkGrayishBlue};
-  position: relative;
+export const Wrapper = styled.section``;
+
+export const Title = styled.h1``;
+
+export const Content = styled.p``;
+
+export const Button = styled.button`
+  background-color: ${({ theme: { neonGreen } }) => neonGreen};
   display: flex;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: 100%;
-  max-width: 33.75rem;
-  min-height: 20.75rem;
-  border-radius: 0.875rem;
-  padding: 3.25rem 3rem;
-  margin: 0 1rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-50%);
 
-  section.data {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2.25rem;
-    padding-bottom: 2.25rem;
-
-    span {
-      color: ${({ theme }) => theme.neonGreen};
-      font-size: 1.25rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    p {
-      color: ${({ theme }) => theme.lightCyan};
-      font-size: clamp(
-        1rem,
-        2.5vw + 0.1rem,
-        ${({ theme }) => theme.defaultFontSize}
-      );
-      font-weight: ${({ theme }) => theme.defaultFontWeight};
-      text-align: center;
-
-      &::before {
-        content: '“';
-      }
-
-      &::after {
-        content: '”';
-      }
-    }
-  }
-
-  img.divider {
-    width: 100%;
+  &:hover {
+    filter: drop-shadow(0px 0px 12px ${({ theme: { neonGreen } }) => neonGreen})
+      brightness(1.1);
   }
 `;
+
+export const Image = styled.img``;

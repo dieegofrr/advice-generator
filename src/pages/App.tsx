@@ -1,5 +1,4 @@
-import Card from '@/components/Card';
-import Considerations from '@/components/Considerations';
+import { Card, Considerations } from '@/components';
 
 const App = () => {
   return (

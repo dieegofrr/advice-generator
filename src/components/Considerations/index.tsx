@@ -1,6 +1,6 @@
 import { ConsiderationsContainer } from './style';
 
-const Considerations = () => (
+export const Considerations = () => (
   <ConsiderationsContainer>
     <p>
       Challenge by{' '}
@@ -34,5 +34,3 @@ const Considerations = () => (
     </p>
   </ConsiderationsContainer>
 );
-
-export default Considerations;
