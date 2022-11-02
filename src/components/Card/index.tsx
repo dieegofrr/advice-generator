@@ -4,15 +4,16 @@ import * as Styled from './style';
 export const Card = () => {
   const { advice, getAdvice } = useAdvice();
   const { id, advice: text } = advice;
-  const adviceLabelID = `advice number ${id}`;
 
   return (
     <Styled.Wrapper>
-      <Styled.Title>advice #{id || '00'}</Styled.Title>
+      <Styled.Title aria-label={`advice number ${id}`}>
+        advice #{id || '00'}
+      </Styled.Title>
       <Styled.Content>{text}</Styled.Content>
-      <Styled.Image />
+      <Styled.Divider src="/imgs/pattern-divider.svg" alt="pattern divider" />
       <Styled.Button>
-        <Styled.Image src="/imgs/icon-dice.svg" alt="dice" aria-hidden />
+        <Styled.Dice src="/imgs/icon-dice.svg" alt="dice" aria-hidden />
       </Styled.Button>
     </Styled.Wrapper>
   );

@@ -4,7 +4,7 @@ export const App = () => {
   return (
     <>
       <Card />
-      <Considerations />
+      {/* <Considerations /> */}
     </>
   );
 };
