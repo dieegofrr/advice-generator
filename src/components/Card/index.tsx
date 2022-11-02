@@ -3,7 +3,7 @@ import { useAdvice } from '@/hooks/useAdvice';
 import * as Styled from './style';
 
 export const Card: FC = () => {
-  const contentRef = useRef() as MutableRefObject<HTMLObjectElement>;
+  const contentRef = useRef() as MutableRefObject<HTMLParagraphElement>;
 
   const {
     isLoading,
