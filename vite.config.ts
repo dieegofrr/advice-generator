@@ -9,6 +9,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'happy-dom',
+    include: ['**/test.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
   },
   resolve: {
     alias: {
